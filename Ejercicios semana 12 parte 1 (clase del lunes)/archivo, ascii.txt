@@ -1,0 +1,16 @@
+# === Creador de archivo 'ascii.txt' con caracteres ASCII ===
+
+# Nombre fijo del archivo
+nombre_archivo = "ascii.txt"
+
+# Abrimos el archivo en modo escritura
+archivo = open(nombre_archivo, "w", encoding="utf-8")
+
+# Escribimos los caracteres imprimibles (del 32 al 126)
+for codigo in range(32, 127):
+    caracter = chr(codigo)
+    linea = f"{codigo}: {caracter}\n"
+    archivo.write(linea)
+
+archivo.close()
+print("El archivo 'ascii.txt' fue creado con la tabla de caracteres ASCII.")
